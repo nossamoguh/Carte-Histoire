@@ -7,8 +7,15 @@ document.body.appendChild(plan)
 
 const react = plan.getBoundingClientRect();
 
-element.addEventListener("mousemove", (event) => {
+plan.addEventListener("mousemove", (event) => {
     const x = event.clientX - react.left;
     const y = event.clientY - react.right;
     console.log(x, y)
 });
+
+const closewindow = document.querySelector(".closewindow");
+closewindow.addEventListener("click", function() {
+    this.closest(".sidebardiv").remove();
+});
+
+
