@@ -9,15 +9,15 @@ body{
 
 .sidebardiv{
     width: 200px;
-    height: 50vh;
+    height: 100vh;
     background-color: aliceblue;
     right: 0;
     position: fixed;
     color: #2b2a21;
 
     display: flex;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 0;
+    transform: translateY(0);
     padding: 10px;
 }
 
