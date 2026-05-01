@@ -1,13 +1,14 @@
 body{
     background-color: #2b2a21;
     color: #eaf0a8;
+    margin-top: -5%;
 }
 
 .colonne_droite{
     text-align: left;
 }
 
-.sidebardiv{
+.sidebar1{
     width: 200px;
     height: 50vh;
     background-color: aliceblue;
@@ -24,7 +25,3 @@ body{
     opacity: 82%;
     margin-right: 1%;
 }
-
-.sidebar2{
-    margin-left: -995%;
-}       
