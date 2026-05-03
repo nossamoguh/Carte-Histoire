@@ -10,6 +10,7 @@ body{
     right: 0;
     position: fixed;
     color: #2b2a21;
+    overflow: auto;
 
     display: flex;
     top: 50%;
@@ -48,3 +49,5 @@ body{
     position: fixed;
     top: 50%;
 }
+
+
