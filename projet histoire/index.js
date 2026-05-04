@@ -39,6 +39,11 @@ closewindow.addEventListener("click", function() {
     this.closest(".sidebar1").remove();
 });
 
+const returnbutton = document.querySelector(".return"); //*sélection de l'élément avec la classe "return" pour revenir à la page d'accueil*
+returnbutton.addEventListener("click", function() {
+    window.location.href = "index.html"; //*redirection vers la page d'accueil*
+});
+
 //*Notre dame de paris : environ x = 809 y = 538
 
 
