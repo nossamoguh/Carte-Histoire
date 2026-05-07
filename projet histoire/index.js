@@ -1,51 +1,51 @@
-var plan = document.createElement("img") //création de l'image du plan de Paris
-plan.src = "Paris1790.jpg" //source de l'image du plan de Paris
-
-plan.style.maxWidth = "100%" //ajustement de la taille de l'image du plan de Paris
-plan.style.height = "auto" 
-document.body.appendChild(plan) //ajout de l'image du plan de Paris à la page HTML
-
-
-
-plan.addEventListener("mousemove", (event) => { // renvoie les mouvements de la souris sur l'image du plan de Paris
-   
+const plan = document.querySelector(".image"); 
+plan.addEventListener("mousemove", (event) => { 
     const rect = plan.getBoundingClientRect();
     const x = event.clientX - rect.left;
     const y = event.clientY - rect.top;
     console.log(`Mouse position: (${x}, ${y})`);
 
-    /*plan.style.transformOrigin = `${x * 100}% ${y * 100}%`
-    plan.style.transform = "scale(2)"*/
 });
 
-/*plan.addEventListener("mouseleave", () => {
-    plan.style.transform = "scale(1)"
-})*/
-
-var zoom = document.querySelector(".zoom"); //sélection de l'élément avec la classe "zoom" pour zoomer sur l'image du plan de Paris
-zoom.addEventListener("click", function zoomIn() { 
-
-}); //*ajout d'un événement de clic pour zoomer sur l'image du plan de Paris
 
 
-if ('Mouse position: (${x}, ${y})' === 'Mouse position: (809, 538)') { //si la position de la souris est égale à celle de Notre Dame de Paris, alors afficher les informations sur Notre Dame de Paris
-    if ('MouseEvent.click'){
+const image = document.getElementById("image");
+const zoomin = document.querySelector(".zoomin");
+const zoomout = document.querySelector(".zoomout");
+const resetzoom = document.querySelector(".resetzoom");
+
+zoomin.addEventListener("click",  (zoomin) => {
+    
+    image.style.transform = "scale(1.5)";
+}); 
+
+zoomout.addEventListener("click",  (zoomout) => {
+    image.style.transform = "scale(0.5)";
+}); 
+
+resetzoom.addEventListener("click",  (resetzoom) => {
+
+    image.style.transform = "scale(1)";
+}); 
+
+
+
+
+if ('Mouse position: (${x}, ${y})' === 'Mouse position: (809, 538)') { 
+        if ('MouseEvent.click'){
         sidebar.innerHTML(Notre_dame_de_paris);
     }
 }
 
-const closewindow = document.querySelector(".closewindow"); //*sélection de l'élément avec la classe "closewindow" pour fermer la fenêtre d'information*
+const closewindow = document.querySelector(".closewindow"); 
 closewindow.addEventListener("click", function() {
     this.closest(".sidebar1").remove();
 });
 
-const returnbutton = document.querySelector(".return"); //*sélection de l'élément avec la classe "return" pour revenir à la page d'accueil*
+const returnbutton = document.querySelector(".return"); 
 returnbutton.addEventListener("click", function() {
-    window.location.href = "index.html"; //*redirection vers la page d'accueil*
+    window.location.href = "index.html";
 });
-
-//*Notre dame de paris : environ x = 809 y = 538
-
 
 function TextSidebar(section) {
     const content = document.getElementById("content"); 
