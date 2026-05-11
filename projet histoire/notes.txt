@@ -1,3 +1,6 @@
-Etape 1 : Déplacements dans la carte + zoom
+Etape 1 : Déplacements dans la carte
 Etape 2 : Mise en place des batiments
 Etape 3 : Faire les textes et les images
+
+check : 
+Zoom✅
