@@ -63,6 +63,10 @@ function TextSidebar(section) {
         content.innerText = ""
     }
 
+    if (section == "Panthéon") {
+        content.innerText = ""
+    }
+
     if (section == "Palais_royal") {
         content.innerText = ""
     }
@@ -71,11 +75,30 @@ function TextSidebar(section) {
         content.innerText = ""
     }
 
-    if (section == "Palais du luxembourg") {
+    if (section == "Palais_du_luxembourg") {
         content.innerText = ""
     }
 
     if (section == "Place_de_la_revolution") {
         content.innerText = ""
     }
+}
+
+let positionX = 0;
+let positionY = 0;
+
+
+function UpdateCursor() {
+    
+    image.style.transform = `translate(${positionX}px, ${positionY}px) scale(${Scale})`;
+
+    if (Scale > 1) {
+        image-container.classList.add("zoomed");
+    } else {
+        image-container.classList.remove("zoomed");
+    }
+
+    positionX = 0;
+    positionY = 0;
+    
 }
