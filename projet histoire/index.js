@@ -16,18 +16,33 @@ const resetzoom = document.querySelector(".resetzoom");
 let Scale = 1;
 
 zoomin.addEventListener("click",  (zoomin) => {
-    Scale += 0.1;
+    Scale += 0.25;
+    image.style.transition = "transform 0.5s ease-out";
+    
+    if (Scale >= 2.5) {
+        Scale += 0.5
+    }
+
     image.style.transform = `scale(${Scale})`;
+
 }); 
 
 zoomout.addEventListener("click",  (zoomout) => {
-    Scale -= 0.1;
+    Scale -= 0.25;
+    
+    if (Scale < 0.75) {
+        Scale = 0.75
+    }
+
+    image.style.transition = "transform 0.3s ease-out";
+
     image.style.transform = `scale(${Scale})`;
 }); 
 
 resetzoom.addEventListener("click",  (resetzoom) => {
     image.style.transform = "scale(1)";
     Scale = 1;
+    image.style.transition = "transform 0.5s ease-out";
 }); 
 
 
@@ -106,3 +121,7 @@ function UpdateCursor() {
     positionY = 0;
     
 }
+
+content.addEventListener("click",  (content) => {
+    content.style.size = "100%";
+});
