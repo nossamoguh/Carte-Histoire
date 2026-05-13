@@ -82,6 +82,10 @@ function TextSidebar(section) {
     if (section == "Place_de_la_revolution") {
         content.innerText = ""
     }
+    
+     if (section == "Palais_des_tuileries") {
+        content.innerText = ""
+    }
 }
 
 let positionX = 0;
